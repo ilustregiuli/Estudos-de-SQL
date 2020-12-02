@@ -144,3 +144,48 @@ sexo = 'Masculino'
 OR
 departamento = 'Jardim';
 
+SELECT * from CLIENTE 
+WHERE
+email is null;
+
+update CLIENTE
+set nome = 'regina duarte'
+where nome = 'regina DUARTA';
+
+delete from CLIENTE
+where nome = 'JOSE CARDOSO';	
+
+INSERT INTO cliente VALUES('Lucinha Lins','F','atrizdesegunda@bol.com',00012369812,'(11) 2345678',
+'Avenida dos Rosários, Vai Vai, Rio de Janeiro - RJ');
+
+------------------ exercício sobre Primeira Forma Normal ----------------------
+
+CREATE DATABASE comercio;  --- criando banco
+
+CREATE TABLE cliente(
+
+	IDCLIENTE INT PRIMARY KEY AUTO_INCREMENT,
+	NOME VARCHAR(30) NOT NULL,
+	SEXO ENUM('M','F') NOT NULL,
+	EMAIL VARCHAR(50) UNIQUE,
+	CPF VARCHAR(15) UNIQUE
+
+);
+
+CREATE TABLE endereco(
+
+	IDENDERECO INT PRIMARY KEY AUTO_INCREMENT,
+	RUA VARCHAR(30) NOT NULL,
+	BAIRRO VARCHAR(30) NOT NULL,
+	CIDADE VARCHAR(30) NOT NULL,
+	ESTADO CHAR(2) NOT NULL
+
+);
+
+CREATE TABLE telefone(
+
+	IDTELEFONE INT PRIMARY KEY AUTO_INCREMENT,
+	TIPO ENUM('RES','COM','CEL') NOT NULL,
+	NUMERO VARCHAR(10) NOT NULL
+
+);
