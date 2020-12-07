@@ -189,3 +189,47 @@ CREATE TABLE telefone(
 	NUMERO VARCHAR(10) NOT NULL
 
 );
+
+CONCEITOS:
+
+***************************************************************************************************
+Chave Estrangeira: é uma chave primária de outra tabela usada para fazer referência entre registros.
+
+Fazendo uma "CONSTRAINT" (regra) para criar uma Foreign Key:
+
+CREATE TABLE endereco(
+
+	IDENDERECO INT PRIMARY KEY AUTO_INCREMENT,
+	RUA VARCHAR(30) NOT NULL,
+	BAIRRO VARCHAR(30) NOT NULL,
+	CIDADE VARCHAR(30) NOT NULL,
+	ESTADO CHAR(2) NOT NULL,
+	ID_CLIENTE INT,
+	FOREIGN KEY(ID_CLIENTE)
+	REFERENCES CLIENTE(IDCLIENTE)
+
+);
+
+CREATE TABLE telefone (
+
+	IDTELEFONE INT PRIMARY KEY AUTO_INCREMENT,
+	TIPO ENUM('RES','COM','CEL') NOT NULL,
+	ID_CLIENTE INT,
+	FOREIGN KEY(ID_CLIENTE)
+	REFERENCES CLIENTE(IDCLIENTE)
+
+);
+
+CREATE TABLE CLIENTE (
+
+	IDCLIENTE INT PRIMARY KEY AUTO_INCREMENT,
+	NOME VARCHAR(30) NOT NULL,
+	SEXO ENUM('M','F') NOT NULL,
+	EMAIL VARCHAR(50) UNIQUE,
+	CPF VARCHAR(15) UNIQUE
+
+);
+
+
+
+
