@@ -230,6 +230,53 @@ CREATE TABLE CLIENTE (
 
 );
 
+INSERT INTO CLIENTE VALUES(
+	NULL, 'Giuli Gilberto Ilustre','M','ilustre.giuli@gmail.com','222.333.111-09'
+);
+INSERT INTO CLIENTE VALUES(
+	NULL, 'Carlos Roberto','M','roberto.carlos@hotmail.com','900.105.320-18'
+);
+INSERT INTO CLIENTE VALUES(
+	NULL, 'Maria da Graça Xuxa','F','xuxa@planetaputa.com','280.100.015-00'
+);
+INSERT INTO CLIENTE VALUES(
+	NULL, 'John Lennon','M','lennon.beatles@beatles.com.uk','123.456.789-11'
+);
+INSERT INTO CLIENTE VALUES(
+	NULL, 'Kurt Cobain','M','kurdt@nirvanabrasil.com','771.779.230-28'
+);
+INSERT INTO CLIENTE VALUES(
+	NULL, 'Janis Joplin','F','joplin@mercedez.com.de','001.002.336-29'
+);
+INSERT INTO CLIENTE VALUES(
+	NULL, 'Carla Perez','F','carla.perez@boquinhadagarrafa.com.br','998.032.569-99'
+);
+INSERT INTO CLIENTE VALUES(
+	NULL, 'Carlinhos Aguiar','M','carlinhos@topatudo.com','199.171.237-46'
+);
+INSERT INTO CLIENTE VALUES(
+	NULL, 'Gibi da Silva','M','NULL','087.998.114-27'
+);
+INSERT INTO CLIENTE VALUES(
+	NULL, 'Ivo Holanda','M','ivo@pegadinhas.com.br','744.560.369-12'
+);
+
+
+mysql> select * from cliente;
++-----------+------------------------+------+--------------------------------------+----------------+
+| IDCLIENTE | NOME                   | SEXO | EMAIL                                | CPF            |
++-----------+------------------------+------+--------------------------------------+----------------+
+|         1 | Giuli Gilberto Ilustre | M    | ilustre.giuli@gmail.com              | 818.405.780-68 |
+|         2 | Carlos Roberto         | M    | roberto.carlos@hotmail.com           | 900.105.320-18 |
+|         3 | Maria da Graça Xuxa    | F    | xuxa@planetaputa.com                 | 280.100.015-00 |
+|         4 | John Lennon            | M    | lennon.beatles@beatles.com.uk        | 123.456.789-11 |
+|         5 | Kurt Cobain            | M    | kurdt@nirvanabrasil.com              | 771.779.230-28 |
+|         6 | Janis Joplin           | F    | joplin@mercedez.com.de               | 001.002.336-29 |
+|         7 | Carla Perez            | F    | carla.perez@boquinhadagarrafa.com.br | 998.032.569-99 |
+|         8 | Carlinhos Aguiar       | M    | carlinhos@topatudo.com               | 199.171.237-46 |
+|         9 | Gibi da Silva          | M    | NULL                                 | 087.998.114-27 |
+|        10 | Ivo Holanda            | M    | ivo@pegadinhas.com.br                | 744.560.369-12 |
++-----------+------------------------+------+--------------------------------------+----------------+
 
 
 
